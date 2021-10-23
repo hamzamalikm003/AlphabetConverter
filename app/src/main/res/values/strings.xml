@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AlphabetConverter</string>
+    <string name="submit">Convert</string>
+</resources>
