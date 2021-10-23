@@ -25,11 +25,17 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Character.isLowerCase(edittext.getText().toString().charAt(0))){
-                    textView.setText(Character.toString(Character.toUpperCase(edittext.getText().toString().charAt(0))));
-                }
-                else {
-                    textView.setText(Character.toString(Character.toLowerCase(edittext.getText().toString().charAt(0))));
+                try {
+                    if (Character.isLowerCase(edittext.getText().toString().charAt(0))) {
+                        textView.setText(Character.toString(Character.toUpperCase(edittext.getText().toString().charAt(0))));
+
+                    } else {
+                        textView.setText(Character.toString(Character.toLowerCase(edittext.getText().toString().charAt(0))));
+
+                    }
+                }catch (Exception e){
+                    textView.setText("");
+                    textView.setHint("Enter any Character");
                 }
             }
         });
