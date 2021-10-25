@@ -27,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     if (Character.isLowerCase(edittext.getText().toString().charAt(0))) {
-                        textView.setText(Character.toString(Character.toUpperCase(edittext.getText().toString().charAt(0))));
+                        String str="Upper Case: ";
+                        textView.setText(str+Character.toString(Character.toUpperCase(edittext.getText().toString().charAt(0))));
 
                     } else {
-                        textView.setText(Character.toString(Character.toLowerCase(edittext.getText().toString().charAt(0))));
+                        String str="Lower Case: ";
+                        textView.setText(str+Character.toString(Character.toLowerCase(edittext.getText().toString().charAt(0))));
 
                     }
                 }catch (Exception e){
